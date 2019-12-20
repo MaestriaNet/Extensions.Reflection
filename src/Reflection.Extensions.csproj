@@ -6,7 +6,7 @@
         <Authors>Fábio Monteiro Naspolini</Authors>
         <Company>Fábio Monteiro Naspolini</Company>
         <Title>Maestria.Reflection.Extensions</Title>
-        <Description>Extension function pack to increase productivity and improve source code writing.</Description>
+        <Description>Extension function pack to increase productivity and improve source code writing with reflection jobs.</Description>
         <PackageTags>Extension Extensions Fluent Functional Elegance Productivity Maestria Mastery Reflection</PackageTags>
         <RepositoryUrl>ttps://github.com/MaestriaNet/ReflectionExtensions</RepositoryUrl>
         <PackageProjectUrl>https://github.com/MaestriaNet/ReflectionExtensions</PackageProjectUrl>
