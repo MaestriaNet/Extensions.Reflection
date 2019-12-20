@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33BD12E2-A943-4EDC-AD10-5232B0C04C4E}"
+ProjectSection(SolutionItems) = preProject
+	appveyor.yml = appveyor.yml
+	LICENSE = LICENSE
+	README.md = README.md
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Extensions", "src\Reflection.Extensions.csproj", "{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Extensions.Test", "tests\Reflection.Extensions.Test.csproj", "{B75A2526-23E5-4B1D-BA84-62085B93DF8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75A2526-23E5-4B1D-BA84-62085B93DF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75A2526-23E5-4B1D-BA84-62085B93DF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75A2526-23E5-4B1D-BA84-62085B93DF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75A2526-23E5-4B1D-BA84-62085B93DF8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

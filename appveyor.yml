@@ -1,0 +1,29 @@
+version: '0.0.1.{build}'
+image: Visual Studio 2017
+configuration: Release
+dotnet_csproj:
+  patch: true
+  file: 'src\Reflection.Extensions.csproj'
+  version: '0.0.1'
+  package_version: '0.0.1'
+  assembly_version: '0.0.1'
+  file_version: '0.0.1'
+  informational_version: '0.0.1'
+before_build:
+  - ps: dotnet --version
+build_script:
+  - ps: dotnet build
+test_script:
+  - ps: dotnet test --test-adapter-path:. --logger:Appveyor
+artifacts:
+  - path: src\bin\Release\*.nupkg
+    name: Nuget Package
+deploy:
+  - provider: Environment
+    name: Maestria MyGet
+    on:
+      branch: master
+  - provider: Environment
+    name: Maestria NuGet
+    on:
+      APPVEYOR_REPO_TAG: true

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>Maestria.Reflection.Extensions</PackageId>
+        <Version>1.0.5</Version>
+        <Authors>Fábio Monteiro Naspolini</Authors>
+        <Company>Fábio Monteiro Naspolini</Company>
+        <Title>Maestria.Reflection.Extensions</Title>
+        <Description>Extension function pack to increase productivity and improve source code writing.</Description>
+        <PackageTags>Extension Extensions Fluent Functional Elegance Productivity Maestria Mastery Reflection</PackageTags>
+        <RepositoryUrl>ttps://github.com/MaestriaNet/ReflectionExtensions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/MaestriaNet/ReflectionExtensions</PackageProjectUrl>
+        <License>https://github.com/MaestriaNet/ReflectionExtensions/blob/master/LICENSE</License>
+        <PackageIconUrl>https://raw.githubusercontent.com/MaestriaNet/ReflectionExtensions/master/resources/icon.png</PackageIconUrl>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Maestria.Reflection.Extensions</AssemblyName>
+        <RootNamespace>Maestria.Reflection.Extensions</RootNamespace>
+        <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
+    </ItemGroup>
+
+</Project>
