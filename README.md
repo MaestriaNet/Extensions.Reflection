@@ -19,6 +19,20 @@ This library is part of Maestria Project.
 
 Maestria is a project to provide maximum productivity and elegance to your code.
 
+## Where can I get it?
+
+First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [Maestria.Reflection.Extensions](https://www.nuget.org/packages/Maestria.Reflection.Extensions/) from the package manager console:
+
+```bash
+PM> Install-Package Maestria.Reflection.Extensions
+```
+
+or install from the dotnet cli command line:
+
+```bash
+> dotnet add package Maestria.Reflection.Extensions
+```
+
 ## How do I get started?
 
 First, import "Maestria.Reflection.Extensions" reference:
@@ -41,20 +55,6 @@ ReflectionExtensions.SetPropertyValue(<object-instance>, <property-name>, <value
 <T> ReflectionExtensions.GetPropertyValue<T>(<object-instance>, <property-name>)
 <object> ReflectionExtensions.GetTaskResult(<task-instance>)
 <object> ReflectionExtensions.InvokeMethod(<object-instance>, <method-name>, <parameters>)
-```
-
-Where can I get it?
-
-First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [Maestria.Reflection.Extensions](https://www.nuget.org/packages/Maestria.Reflection.Extensions/) from the package manager console:
-
-```bash
-PM> Install-Package Maestria.Reflection.Extensions
-```
-
-or install from the dotnet cli command line:
-
-```bash
-> dotnet add package Maestria.Reflection.Extensions
 ```
 
 [![buy-me-a-coffee](resources/buy-me-a-coffee.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
