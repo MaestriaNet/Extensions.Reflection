@@ -3,6 +3,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/81ctraq8ry13ma18/branch/master?svg=true)](https://ci.appveyor.com/project/fabionaspolini/reflectionextensions/branch/master)
 [![NuGet](https://buildstats.info/nuget/Maestria.Reflection.Extensions)](https://www.nuget.org/packages/Maestria.Reflection.Extensions)
 [![MyGet](https://img.shields.io/myget/maestrianet/v/Maestria.Reflection.Extensions?label=MyGet)](https://www.myget.org/feed/maestrianet/package/nuget/Maestria.Reflection.Extensions)
+[![Apimundo](https://img.shields.io/badge/Maestria.Reflection.Extensions%20API-Apimundo-728199.svg)](https://apimundo.com/organizations/nuget-org/nuget-feeds/public/packages/Maestria.Reflection.Extensions/versions/latest?tab=types)
+
 
 [![Build History](https://buildstats.info/appveyor/chart/fabionaspolini/reflectionextensions?branch=master)](https://ci.appveyor.com/project/fabionaspolini/reflectionextensions/history?branch=master)
 

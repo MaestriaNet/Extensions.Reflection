@@ -20,6 +20,7 @@
         <AssemblyName>Maestria.Reflection.Extensions</AssemblyName>
         <RootNamespace>Maestria.Reflection.Extensions</RootNamespace>
         <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
