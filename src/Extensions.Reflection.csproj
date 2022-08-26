@@ -4,16 +4,16 @@
         <Authors>Fábio Monteiro Naspolini</Authors>
         <Company>Fábio Monteiro Naspolini</Company>
         <Description>Extension function pack to increase productivity and improve source code writing with reflection jobs.</Description>
-        <License>https://github.com/MaestriaNet/ReflectionExtensions/blob/master/LICENSE</License>
+        <License>https://github.com/MaestriaNet/Extensions.Reflection/blob/master/LICENSE</License>
         <PackageIcon>icon.png</PackageIcon>
-        <PackageIconUrl>https://raw.githubusercontent.com/MaestriaNet/ReflectionExtensions/master/resources/icon.png</PackageIconUrl>
+        <PackageIconUrl>https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/icon.png</PackageIconUrl>
         <PackageId>Maestria.Extensions.Reflection</PackageId>
-        <PackageProjectUrl>https://github.com/MaestriaNet/ReflectionExtensions</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/MaestriaNet/Extensions.Reflection</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>Extension Extensions Fluent Functional Elegance Productivity Maestria Mastery Reflection</PackageTags>
-        <RepositoryUrl>https://github.com/MaestriaNet/ReflectionExtensions</RepositoryUrl>
+        <RepositoryUrl>https://github.com/MaestriaNet/Extensions.Reflection</RepositoryUrl>
         <Title>Maestria.Extensions.Reflection</Title>
-        <Version>1.1.1</Version>
+        <Version>1.1.2</Version>
     </PropertyGroup>
 
     <PropertyGroup>
