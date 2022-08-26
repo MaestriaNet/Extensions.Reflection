@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace Maestria.Reflection.Extensions
+namespace Maestria.Extensions.Reflection
 {
     public static class ReflectionExtensions
     {

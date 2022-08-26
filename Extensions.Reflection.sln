@@ -7,9 +7,9 @@ ProjectSection(SolutionItems) = preProject
 	README.md = README.md
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Extensions", "src\Reflection.Extensions.csproj", "{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Reflection", "src\Extensions.Reflection.csproj", "{97B7B5E5-4F04-41B5-A72F-7C1F7BB915DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection.Extensions.Test", "tests\Reflection.Extensions.Test.csproj", "{B75A2526-23E5-4B1D-BA84-62085B93DF8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Reflection.Test", "tests\Extensions.Reflection.Test.csproj", "{B75A2526-23E5-4B1D-BA84-62085B93DF8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

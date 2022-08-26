@@ -1,6 +1,6 @@
-﻿using Maestria.Reflection.Extensions.Test.Interfaces;
+﻿using Maestria.Extensions.Reflection.Test.Interfaces;
 
-namespace Maestria.Reflection.Extensions.Test.Models
+namespace Maestria.Extensions.Reflection.Test.Models
 {
     public class BaseClass : IBaseInterface
     {

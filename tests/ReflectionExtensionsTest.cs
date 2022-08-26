@@ -1,8 +1,8 @@
-using Maestria.Reflection.Extensions.Test.Interfaces;
-using Maestria.Reflection.Extensions.Test.Models;
+using Maestria.Extensions.Reflection.Test.Interfaces;
+using Maestria.Extensions.Reflection.Test.Models;
 using NUnit.Framework;
 
-namespace Maestria.Reflection.Extensions.Test
+namespace Maestria.Extensions.Reflection.Test
 {
     public class ReflectionUtilsTest
     {

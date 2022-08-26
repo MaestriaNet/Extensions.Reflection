@@ -1,16 +1,16 @@
-# Maestria Reflection Extensions
+# Maestria.Extensions.Reflection
 
-[![Build status](https://ci.appveyor.com/api/projects/status/81ctraq8ry13ma18/branch/master?svg=true)](https://ci.appveyor.com/project/fabionaspolini/reflectionextensions/branch/master)
-[![NuGet](https://buildstats.info/nuget/Maestria.Reflection.Extensions)](https://www.nuget.org/packages/Maestria.Reflection.Extensions)
-[![MyGet](https://img.shields.io/myget/maestrianet/v/Maestria.Reflection.Extensions?label=MyGet)](https://www.myget.org/feed/maestrianet/package/nuget/Maestria.Reflection.Extensions)
-[![Apimundo](https://img.shields.io/badge/Maestria.Reflection.Extensions%20API-Apimundo-728199.svg)](https://apimundo.com/organizations/nuget-org/nuget-feeds/public/packages/Maestria.Reflection.Extensions/versions/latest?tab=types)
+[![Build status](https://ci.appveyor.com/api/projects/status/81ctraq8ry13ma18/branch/master?svg=true)](https://ci.appveyor.com/project/fabionaspolini/maestria-extensions-reflection/branch/master)
+[![NuGet](https://buildstats.info/nuget/Maestria.Extensions.Reflection)](https://www.nuget.org/packages/Maestria.Extensions.Reflection)
+[![MyGet](https://img.shields.io/myget/maestrianet/v/Maestria.Extensions.Reflection?label=MyGet)](https://www.myget.org/feed/maestrianet/package/nuget/Maestria.Extensions.Reflection)
+[![Apimundo](https://img.shields.io/badge/Maestria.Extensions.Reflection%20API-Apimundo-728199.svg)](https://apimundo.com/organizations/nuget-org/nuget-feeds/public/packages/Maestria.Extensions.Reflection/versions/latest?tab=types)
 
 
-[![Build History](https://buildstats.info/appveyor/chart/fabionaspolini/reflectionextensions?branch=master)](https://ci.appveyor.com/project/fabionaspolini/reflectionextensions/history?branch=master)
+[![Build History](https://buildstats.info/appveyor/chart/fabionaspolini/maestria-extensions-reflection?branch=master)](https://ci.appveyor.com/project/fabionaspolini/maestria-extensions-reflection/history?branch=master)
 
 [![donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
 
-## What is Reflection Extensions?
+## What is Maestria.Extensions.Reflection?
 
 This package provider a fluent syntax to simple data conversions.
 Extension functions package for simple data convert.
@@ -23,24 +23,24 @@ Maestria is a project to provide maximum productivity and elegance to your code.
 
 ## Where can I get it?
 
-First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [Maestria.Reflection.Extensions](https://www.nuget.org/packages/Maestria.Reflection.Extensions/) from the package manager console:
+First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [Maestria.Extensions.Reflection](https://www.nuget.org/packages/Maestria.Extensions.Reflection/) from the package manager console:
 
 ```bash
-PM> Install-Package Maestria.Reflection.Extensions
+PM> Install-Package Maestria.Extensions.Reflection
 ```
 
 or install from the dotnet cli command line:
 
 ```bash
-> dotnet add package Maestria.Reflection.Extensions
+> dotnet add package Maestria.Extensions.Reflection
 ```
 
 ## How do I get started?
 
-First, import "Maestria.Reflection.Extensions" reference:
+First, import "Maestria.Extensions.Reflection" reference:
 
 ```csharp
-using Maestria.Reflection.Extensions;
+using Maestria.Extensions.Reflection;
 ```
 
 Then in your application code, use fluent syntax: 

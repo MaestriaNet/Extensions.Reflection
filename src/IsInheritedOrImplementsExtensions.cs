@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace Maestria.Reflection.Extensions
+namespace Maestria.Extensions.Reflection
 {
     internal static class IsInheritedOrImplementsExtensions
     {

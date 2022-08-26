@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <IsPackable>false</IsPackable>
-        <AssemblyName>Maestria.Reflection.Extensions.Test</AssemblyName>
-        <RootNamespace>Maestria.Reflection.Extensions.Test</RootNamespace>
+        <AssemblyName>Maestria.Extensions.Reflection.Test</AssemblyName>
+        <RootNamespace>Maestria.Extensions.Reflection.Test</RootNamespace>
         <LangVersion>8</LangVersion>
     </PropertyGroup>
 
@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\Reflection.Extensions.csproj" />
+      <ProjectReference Include="..\src\Extensions.Reflection.csproj" />
     </ItemGroup>
 
 </Project>

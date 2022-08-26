@@ -1,4 +1,4 @@
-﻿namespace Maestria.Reflection.Extensions.Test.Interfaces
+﻿namespace Maestria.Extensions.Reflection.Test.Interfaces
 {
     public interface IBaseInterface
     {
