@@ -94,8 +94,8 @@ namespace Maestria.Extensions.Reflection
         }
 
         /// <summary>
-        /// typeof(List<int>)                            = System.Collections.Generic.List`1[System.Int32]
-        /// typeof(List<int>).GetGenericTypeDefinition() = System.Collections.Generic.List`1[T]
+        /// typeof(List int)                            = System.Collections.Generic.List`1[System.Int32]
+        /// typeof(List int).GetGenericTypeDefinition() = System.Collections.Generic.List`1[T]
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>

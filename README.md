@@ -8,7 +8,7 @@
 
 [![Build History](https://buildstats.info/appveyor/chart/fabionaspolini/maestria-extensions-reflection?branch=master)](https://ci.appveyor.com/project/fabionaspolini/maestria-extensions-reflection/history?branch=master)
 
-[![donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+[![donate](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/btn_donate.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
 
 ## What is Maestria.Extensions.Reflection?
 
@@ -59,9 +59,9 @@ ReflectionExtensions.SetPropertyValue(<object-instance>, <property-name>, <value
 <object> ReflectionExtensions.InvokeMethod(<object-instance>, <method-name>, <parameters>)
 ```
 
-[![buy-me-a-coffee](resources/buy-me-a-coffee.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
-[![smile.png](resources/smile.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+[![buy-me-a-coffee](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/buy-me-a-coffee.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+[![smile.png](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/smile.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
 
 If my contributions helped you, please help me buy a coffee :D
 
-[![donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+[![donate](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/btn_donate.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)

@@ -1,27 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageId>Maestria.Extensions.Reflection</PackageId>
-        <Version>1.1.0</Version>
         <Authors>Fábio Monteiro Naspolini</Authors>
         <Company>Fábio Monteiro Naspolini</Company>
-        <Title>Maestria.Extensions.Reflection</Title>
         <Description>Extension function pack to increase productivity and improve source code writing with reflection jobs.</Description>
-        <PackageTags>Extension Extensions Fluent Functional Elegance Productivity Maestria Mastery Reflection</PackageTags>
-        <RepositoryUrl>ttps://github.com/MaestriaNet/ReflectionExtensions</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/MaestriaNet/ReflectionExtensions</PackageProjectUrl>
         <License>https://github.com/MaestriaNet/ReflectionExtensions/blob/master/LICENSE</License>
+        <PackageIcon>icon.png</PackageIcon>
         <PackageIconUrl>https://raw.githubusercontent.com/MaestriaNet/ReflectionExtensions/master/resources/icon.png</PackageIconUrl>
-        <LangVersion>8</LangVersion>
+        <PackageId>Maestria.Extensions.Reflection</PackageId>
+        <PackageProjectUrl>https://github.com/MaestriaNet/ReflectionExtensions</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageTags>Extension Extensions Fluent Functional Elegance Productivity Maestria Mastery Reflection</PackageTags>
+        <RepositoryUrl>https://github.com/MaestriaNet/ReflectionExtensions</RepositoryUrl>
+        <Title>Maestria.Extensions.Reflection</Title>
+        <Version>1.1.1</Version>
     </PropertyGroup>
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
         <AssemblyName>Maestria.Extensions.Reflection</AssemblyName>
-        <RootNamespace>Maestria.Extensions.Reflection</RootNamespace>
-        <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+        <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
+        <LangVersion>9</LangVersion>
+        <NoWarn>CS1591</NoWarn>
+        <RootNamespace>Maestria.Extensions.Reflection</RootNamespace>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\resources\icon.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />

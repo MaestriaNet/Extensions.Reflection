@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
-        <IsPackable>false</IsPackable>
         <AssemblyName>Maestria.Extensions.Reflection.Test</AssemblyName>
+        <IsPackable>false</IsPackable>
+        <LangVersion>9</LangVersion>
+        <NoWarn>CS1591</NoWarn>
         <RootNamespace>Maestria.Extensions.Reflection.Test</RootNamespace>
-        <LangVersion>8</LangVersion>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\Extensions.Reflection.csproj" />
+        <ProjectReference Include="..\src\Extensions.Reflection.csproj" />
     </ItemGroup>
 
 </Project>
