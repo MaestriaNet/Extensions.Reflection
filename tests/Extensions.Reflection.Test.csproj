@@ -3,10 +3,10 @@
     <PropertyGroup>
         <AssemblyName>Maestria.Extensions.Reflection.Test</AssemblyName>
         <IsPackable>false</IsPackable>
-        <LangVersion>9</LangVersion>
+        <LangVersion>14</LangVersion>
         <NoWarn>CS1591</NoWarn>
         <RootNamespace>Maestria.Extensions.Reflection.Test</RootNamespace>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
