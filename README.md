@@ -1,14 +1,19 @@
 # Maestria.Extensions.Reflection
 
-[![Build status](https://ci.appveyor.com/api/projects/status/81ctraq8ry13ma18/branch/master?svg=true)](https://ci.appveyor.com/project/fabionaspolini/maestria-extensions-reflection/branch/master)
-[![NuGet](https://buildstats.info/nuget/Maestria.Extensions.Reflection)](https://www.nuget.org/packages/Maestria.Extensions.Reflection)
-[![MyGet](https://img.shields.io/myget/maestrianet/v/Maestria.Extensions.Reflection?label=MyGet)](https://www.myget.org/feed/maestrianet/package/nuget/Maestria.Extensions.Reflection)
+[![NuGet Version](https://img.shields.io/nuget/v/Maestria.Extensions.Reflection)](https://www.nuget.org/packages/Maestria.Extensions.Reflection/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Maestria.Extensions.Reflection)](https://www.nuget.org/packages/Maestria.Extensions.Reflection/)
 [![Apimundo](https://img.shields.io/badge/Maestria.Extensions.Reflection%20API-Apimundo-728199.svg)](https://apimundo.com/organizations/nuget-org/nuget-feeds/public/packages/Maestria.Extensions.Reflection/versions/latest?tab=types)
 
+---
 
-[![Build History](https://buildstats.info/appveyor/chart/fabionaspolini/maestria-extensions-reflection?branch=master)](https://ci.appveyor.com/project/fabionaspolini/maestria-extensions-reflection/history?branch=master)
+[![buy-me-a-coffee](https://raw.githubusercontent.com/MaestriaNet/Extensions/master/resources/buy-me-a-coffee.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+[![smile.png](https://raw.githubusercontent.com/MaestriaNet/Extensions/master/resources/smile.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
 
-[![donate](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/btn_donate.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+If my contributions helped you, please help me buy a coffee :D
+
+[![donate](https://raw.githubusercontent.com/MaestriaNet/Extensions/master/resources/btn_donate.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+
+---
 
 ## What is Maestria.Extensions.Reflection?
 
@@ -58,6 +63,8 @@ ReflectionExtensions.SetPropertyValue(<object-instance>, <property-name>, <value
 <object> ReflectionExtensions.GetTaskResult(<task-instance>)
 <object> ReflectionExtensions.InvokeMethod(<object-instance>, <method-name>, <parameters>)
 ```
+
+--
 
 [![buy-me-a-coffee](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/buy-me-a-coffee.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
 [![smile.png](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/smile.png)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)

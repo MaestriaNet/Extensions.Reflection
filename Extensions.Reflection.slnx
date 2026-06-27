@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".claudeignore" />
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Extensions.Reflection.csproj" />
+  <Project Path="tests/Extensions.Reflection.Test.csproj" />
+</Solution>
