@@ -42,14 +42,31 @@ jobs:
           # Gets the latest tag pointing to the current or previous commit, matching only tags starting with 'v'
           LAST_TAG=$(git describe --tags --abbrev=0 --match 'v*')
           
+          # Verifica se a variável LAST_TAG está vazia ou nula
+          if [ -z "$LAST_TAG" ]; then
+            echo "::error:: ❌ No matching tags starting with 'v' were found in the repository. Aborting process."
+            exit 1
+          fi
+          
           # Removes the leading 'v' from the tag (e.g., v1.2.0 becomes 1.2.0)
           CLEAN_TAG=${LAST_TAG#v}
           
+          # Splits the clean tag into Major, Minor, and Patch arrays using '.' as the separator
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$CLEAN_TAG"
+          
+          # Increments the Patch version by 1
+          NEXT_PATCH=$((PATCH + 1))
+          
+          # Rebuilds the base version (e.g., from 1.2.0 it becomes 1.2.1)
+          NEXT_VERSION="${MAJOR}.${MINOR}.${NEXT_PATCH}"
+          
+          # Gets the PR number from the native GitHub Actions context
           PR_NUMBER=${{ github.event.pull_request.number }}
           
           # Assembles the final preview version (e.g., 1.2.0-preview.pr-42)
-          PREVIEW_VERSION="${CLEAN_TAG}-preview.pr-${PR_NUMBER}"
+          PREVIEW_VERSION="${NEXT_VERSION}-preview.pr-${PR_NUMBER}"
           
+          echo "Previous stable version: $CLEAN_TAG"
           echo "::notice:: Version: $PREVIEW_VERSION"
           
           # Saves the version to the environment file for subsequent steps to use
