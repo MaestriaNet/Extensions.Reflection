@@ -29,26 +29,12 @@ jobs:
           # O padrão (1) não baixa as tags, fazendo o passo seguinte falhar.
           fetch-depth: 0
 
-      - name: Show branch and commit
+      - name: Show git information
         run: |
-          git rev-parse --abbrev-ref HEAD
-          git rev-parse HEAD
-          git describe --tags --abbrev=0
+          echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
+          echo "Commit hash: $(git rev-parse HEAD)"
+          echo "Last tag: $(git describe --tags --abbrev=0)"
 #          --match "v*"
-
-#      - name: "Determine version: preview"
-#        id: version
-#        run: |
-#          # Obtém o prefixo da versão a partir do nome do branch de release
-#          VERSION_PREFIX="${GITHUB_REF_NAME##*/}"          
-#          VERSION_SUFFIX="preview.${GITHUB_RUN_NUMBER}"
-#
-#          echo "VERSION_PREFIX: $VERSION_PREFIX"
-#          echo "VERSION_SUFFIX: $VERSION_SUFFIX"
-#
-#          echo "version_determined=true" >> $GITHUB_OUTPUT
-#          echo "VERSION_PREFIX=$VERSION_PREFIX" >> $GITHUB_ENV
-#          echo "VERSION_SUFFIX=$VERSION_SUFFIX" >> $GITHUB_ENV
       
       - name: "Determine version: preview"
         id: version
@@ -76,16 +62,6 @@ jobs:
 #        with:
 #          script: core.setFailed("Version could not be determined to branch workflow.");
 
-#      - name: Determine if the version is the same as the one in the "Version.props" file # Security validation
-#        run: |
-#          VERSION_FILE_PREFIX=$(grep -oPm1 "(?<=<VersionPrefix>)[^<]+" src/Version.props)
-#          echo "VERSION_FILE_PREFIX: $VERSION_FILE_PREFIX"
-#          
-#          if [ "$VERSION_FILE_PREFIX" != "$VERSION_PREFIX" ]; then
-#            echo "::error::Version prefix in 'Version.props' file ($VERSION_FILE_PREFIX) does not match witch the determined version prefix from branch name ($VERSION_PREFIX)."
-#            exit 1
-#          fi
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
@@ -106,23 +82,8 @@ jobs:
       - name: Upload nupkg artifact to github
         uses: actions/upload-artifact@v4
         with:
-          name: nuget-package
+          name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}-nuget-package
           path: src/bin/Release/*.nupkg
 
       - name: Publish preview version to MyGet
         run: dotnet nuget push src/bin/Release/*.nupkg --source https://www.myget.org/F/maestrianet/api/v3/index.json --api-key "${{ secrets.MYGET_API_KEY }}"
-
-#      - name: Create pull request
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        run: |
-#          pr_url=$(gh pr list --head "${GITHUB_REF_NAME}" --base "main" --state open --json url --jq .[].url)
-#          if [[ -n "${pr_url}" ]]; then
-#            echo "Pull Request already exists for branch '${GITHUB_REF_NAME}' to 'main': ${pr_url}"
-#          else
-#            gh pr create \
-#              -B main \
-#              -H "$GITHUB_REF_NAME" \
-#              --title "Merge \"$GITHUB_REF_NAME\" into main" \
-#              --body "Created by Github action"
-#          fi
