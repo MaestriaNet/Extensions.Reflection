@@ -35,14 +35,12 @@ jobs:
           echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
           echo "Commit hash: $(git rev-parse HEAD)"
           echo "Last tag: $(git describe --tags --abbrev=0 --match 'v*')"
-#          --match "v*"
       
       - name: "Determine version: preview"
         id: version
         run: |
           # Gets the latest tag pointing to the current or previous commit, matching only tags starting with 'v'
-          # --match "v*"
-          LAST_TAG=$(git describe --tags --abbrev=0)
+          LAST_TAG=$(git describe --tags --abbrev=0 --match 'v*')
           
           # Removes the leading 'v' from the tag (e.g., v1.2.0 becomes 1.2.0)
           CLEAN_TAG=${LAST_TAG#v}

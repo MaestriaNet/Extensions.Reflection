@@ -28,7 +28,6 @@ jobs:
           echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
           echo "Commit hash: $(git rev-parse HEAD)"
           echo "Last tag: $(git describe --tags --abbrev=0 --match 'v*')"
-#          --match "v*"
 
       - name: Check if tag is on the latest main commit
         # Informational step to validate if the tag points to the absolute HEAD of the main branch
