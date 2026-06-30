@@ -44,7 +44,7 @@ jobs:
           
           # Verifica se a variável LAST_TAG está vazia ou nula
           if [ -z "$LAST_TAG" ]; then
-            echo "::error:: ❌ No matching tags starting with 'v' were found in the repository. Aborting process."
+            echo "::error::❌ No matching tags starting with 'v' were found in the repository. Aborting process."
             exit 1
           fi
           
@@ -67,7 +67,7 @@ jobs:
           PREVIEW_VERSION="${NEXT_VERSION}-preview.pr-${PR_NUMBER}"
           
           echo "Previous stable version: $CLEAN_TAG"
-          echo "::notice:: Version: $PREVIEW_VERSION"
+          echo "::notice::Version: $PREVIEW_VERSION"
           
           # Saves the version to the environment file for subsequent steps to use
           echo "PACKAGE_VERSION=$PREVIEW_VERSION" >> $GITHUB_ENV
