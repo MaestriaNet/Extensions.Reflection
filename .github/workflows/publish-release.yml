@@ -105,7 +105,11 @@ jobs:
           artifacts: "src/bin/Release/*.nupkg"
           generateReleaseNotes: true
           
-#          omitBodyDuringUpdate: true
-#          omitDraftDuringUpdate: true
-#          omitNameDuringUpdate: true
-#          omitPrereleaseDuringUpdate: true
+          # Allow create release from github interface.
+          # Github interface create release and tag, that start this workflow and update artifacts of created releases.
+          # When workflow starts from tag push, this execute all from here and create release linking a existing tag.
+          allowUpdates: true
+          omitBodyDuringUpdate: true
+          omitDraftDuringUpdate: true
+          omitNameDuringUpdate: true
+          omitPrereleaseDuringUpdate: true
