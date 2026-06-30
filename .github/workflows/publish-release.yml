@@ -64,7 +64,7 @@ jobs:
 
       - name: Abort if version indeterminate
         if: steps.version.outputs.package_version == ''
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: core.setFailed("Version could not be determined to workflow.");
 
@@ -86,7 +86,7 @@ jobs:
         run: dotnet pack src/Extensions.Reflection.csproj --configuration Release --no-build -p:Version=${{ env.PACKAGE_VERSION }}
 
       - name: Upload nupkg artifact to github
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}
           path: src/bin/Release/*.nupkg
