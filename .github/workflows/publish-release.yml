@@ -100,6 +100,12 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
+          name: "v${{ steps.version.outputs.package_version }}"
+          tag: "v${{ steps.version.outputs.package_version }}"
           artifacts: "src/bin/Release/*.nupkg"
-          tag: "${{ steps.version.outputs.package_version }}"
           generateReleaseNotes: true
+          
+#          omitBodyDuringUpdate: true
+#          omitDraftDuringUpdate: true
+#          omitNameDuringUpdate: true
+#          omitPrereleaseDuringUpdate: true
