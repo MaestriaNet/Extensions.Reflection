@@ -7,7 +7,7 @@ name: publish-release
 on:
   pull_request:
     types: [ closed ]
-    branches: [ "main" ]
+    branches: [ "mainxxxxxxxxxxxxxxxxxx" ]
     paths:
       - src/**
 
