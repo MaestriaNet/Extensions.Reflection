@@ -27,7 +27,7 @@ jobs:
         run: |
           echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
           echo "Commit hash: $(git rev-parse HEAD)"
-          echo "Last tag: $(git describe --tags --abbrev=0)"
+          echo "Last tag: $(git describe --tags --abbrev=0 --match 'v*')"
 #          --match "v*"
 
       - name: Check if tag is on the latest main commit
@@ -36,8 +36,8 @@ jobs:
           # Gets the commit SHA that triggered this tag creation
           TAG_COMMIT=${GITHUB_SHA}
           
-          # Queries the remote repository for the latest commit SHA on the main branch
-          MAIN_COMMIT=$(git ls-remote origin refs/heads/main | awk '{print $1}')
+          # Gets the latest commit SHA from the local origin/main reference
+          MAIN_COMMIT=$(git rev-parse origin/main)
           
           echo "Commit triggered by tag: $TAG_COMMIT"
           echo "Latest commit on main:   $MAIN_COMMIT"
@@ -45,7 +45,9 @@ jobs:
           if [ "$TAG_COMMIT" = "$MAIN_COMMIT" ]; then
             echo "✅ Validation passed: The tag is correctly pointing to the latest commit on the main branch."
           else
-            echo "::warning:: ⚠️ WARNING: The tag was NOT created on the latest commit of the main branch. It might be pointing to an older commit or a different branch."
+            echo "::error:: ❌ ERROR: The tag was NOT created on the latest commit of the main branch."
+            echo "Aborting the process to prevent publishing from an outdated state."
+            exit 1
           fi
 
       - name: "Determine version: stable"
@@ -57,12 +59,13 @@ jobs:
           
           echo "Extracted version: $CLEAN_TAG"
           echo "PACKAGE_VERSION=$CLEAN_TAG" >> $GITHUB_ENV
+          echo "package_version=$CLEAN_TAG" >> $GITHUB_OUTPUT
 
-#      - name: Abort if version indeterminate
-#        if: steps.version.outputs.version_determined == ''
-#        uses: actions/github-script@v8
-#        with:
-#          script: core.setFailed("Version could not be determined to branch workflow.");
+      - name: Abort if version indeterminate
+        if: steps.version.outputs.package_version == ''
+        uses: actions/github-script@v8
+        with:
+          script: core.setFailed("Version could not be determined to workflow.");
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
@@ -84,7 +87,7 @@ jobs:
       - name: Upload nupkg artifact to github
         uses: actions/upload-artifact@v4
         with:
-          name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}-nuget-package
+          name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}
           path: src/bin/Release/*.nupkg
 
       - name: Publish stable version to MyGet
