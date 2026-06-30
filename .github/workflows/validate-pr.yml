@@ -2,8 +2,11 @@ name: validate-pr
 
 on:
   pull_request:
-    types: [ opened, synchronize ]
-    branches: [ "main" ]
+    types:
+      - opened
+      - synchronize
+    branches:
+      - main
 
 jobs:
   validate-pr:
