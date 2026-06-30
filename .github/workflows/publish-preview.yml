@@ -14,6 +14,9 @@ on:
       - src/**
       - tests/**
 
+permissions:
+  contents: read
+
 jobs:
   publish-preview:
     runs-on: ubuntu-latest
