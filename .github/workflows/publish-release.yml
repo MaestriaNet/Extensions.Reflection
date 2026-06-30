@@ -27,8 +27,7 @@ jobs:
         run: |
           echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
           echo "Commit hash: $(git rev-parse HEAD)"
-          echo "Last tag: $(git describe --tags --abbrev=0 --match 'v*')"
-#          --match "v*"
+          echo "Current tag: $GITHUB_REF_NAME"
 
       - name: Check if tag is on the latest main commit
         # Informational step to validate if the tag points to the absolute HEAD of the main branch
@@ -60,6 +59,8 @@ jobs:
           echo "Extracted version: $CLEAN_TAG"
           echo "PACKAGE_VERSION=$CLEAN_TAG" >> $GITHUB_ENV
           echo "package_version=$CLEAN_TAG" >> $GITHUB_OUTPUT
+          
+          echo "::notice:: Version: $CLEAN_TAG"
 
       - name: Abort if version indeterminate
         if: steps.version.outputs.package_version == ''
@@ -100,5 +101,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "src/bin/Release/*.nupkg"
-          tag: "${{ steps.version.outputs.version_prefix }}"
+          tag: "${{ steps.version.outputs.package_version }}"
           generateReleaseNotes: true
