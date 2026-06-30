@@ -105,7 +105,8 @@ jobs:
           artifacts: "src/bin/Release/*.nupkg"
           generateReleaseNotes: true
           
-#          omitBodyDuringUpdate: true
-#          omitDraftDuringUpdate: true
-#          omitNameDuringUpdate: true
-#          omitPrereleaseDuringUpdate: true
+          allowUpdates: true
+          omitBodyDuringUpdate: true
+          omitDraftDuringUpdate: true
+          omitNameDuringUpdate: true
+          omitPrereleaseDuringUpdate: true
