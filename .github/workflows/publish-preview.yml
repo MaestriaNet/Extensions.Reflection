@@ -34,7 +34,7 @@ jobs:
         run: |
           echo "Branch: $(git rev-parse --abbrev-ref HEAD)"
           echo "Commit hash: $(git rev-parse HEAD)"
-          echo "Last tag: $(git describe --tags --abbrev=0)"
+          echo "Last tag: $(git describe --tags --abbrev=0 --match 'v*')"
 #          --match "v*"
       
       - name: "Determine version: preview"
@@ -61,7 +61,7 @@ jobs:
 #        if: steps.version.outputs.version_determined == ''
 #        uses: actions/github-script@v8
 #        with:
-#          script: core.setFailed("Version could not be determined to branch workflow.");
+#          script: core.setFailed("Version could not be determined to workflow.");
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
@@ -83,7 +83,7 @@ jobs:
       - name: Upload nupkg artifact to github
         uses: actions/upload-artifact@v4
         with:
-          name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}-nuget-package
+          name: Maestria.Extensions.Reflection.${{ env.PACKAGE_VERSION }}
           path: src/bin/Release/*.nupkg
 
       - name: Publish preview version to MyGet
