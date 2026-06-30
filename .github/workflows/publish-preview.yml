@@ -25,8 +25,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
         with:
-          # IMPORTANTE: fetch-depth 0 baixa todo o histórico e as tags. 
-          # O padrão (1) não baixa as tags, fazendo o passo seguinte falhar.
+          # IMPORTANT: fetch-depth 0 downloads the entire history and tags.
+          # The default (1) does not download tags, causing the next step to fail.
           fetch-depth: 0
 
       - name: Show git information
