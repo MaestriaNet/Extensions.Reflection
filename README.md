@@ -72,3 +72,4 @@ ReflectionExtensions.SetPropertyValue(<object-instance>, <property-name>, <value
 If my contributions helped you, please help me buy a coffee :D
 
 [![donate](https://raw.githubusercontent.com/MaestriaNet/Extensions.Reflection/master/resources/btn_donate.gif)](https://www.paypal.com/donate?hosted_button_id=8RSES6GAYH9BL)
+
